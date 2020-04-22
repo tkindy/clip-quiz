@@ -9,7 +9,7 @@ const App = () => {
         <h1>Spotify Clip Quiz Game</h1>
 
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
         </Switch>
