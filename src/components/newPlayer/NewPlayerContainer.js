@@ -3,7 +3,7 @@ import NewPlayer from "./NewPlayer";
 import http from "../../app/http";
 import { Redirect } from "react-router-dom";
 
-const Home = () => {
+const NewPlayerContainer = () => {
   const [playerCreated, setPlayerCreated] = useState(false);
 
   const createPlayer = (name) => {
@@ -23,4 +23,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default NewPlayerContainer;

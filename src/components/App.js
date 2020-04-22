@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./home/Home";
+import SpotifyLogin from "./home/SpotifyLogin";
+import NewPlayerContainer from "./newPlayer/NewPlayerContainer";
 import Rooms from "./rooms/Rooms";
 
 const App = () => {
@@ -11,7 +12,10 @@ const App = () => {
 
         <Switch>
           <Route exact path="/">
-            <Home />
+            <SpotifyLogin />
+          </Route>
+          <Route path="/new-player">
+            <NewPlayerContainer />
           </Route>
           <Route path="/rooms">
             <Rooms />

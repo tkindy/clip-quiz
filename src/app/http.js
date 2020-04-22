@@ -1,10 +1,9 @@
 import axios from "axios";
 
-const localBaseUrl = "http://localhost:8080";
-const prodBaseUrl = "https://clip-quiz-api.herokuapp.com";
+export const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
 
 const http = axios.create({
-  baseURL: process.env.NODE_ENV === "production" ? prodBaseUrl : localBaseUrl,
+  baseURL: apiBaseUrl,
 });
 
 export default http;
