@@ -1,18 +1,14 @@
 import React, { useState } from "react";
+import { submitForm, extractInputValue } from "../../app/util";
 
 const NewPlayer = ({ onSubmitPlayer }) => {
   const [name, setName] = useState("");
-  const onNameChange = (e) => setName(e.target.value);
-  const onSubmit = (e) => {
-    e.preventDefault();
-    onSubmitPlayer(name);
-  };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={submitForm(() => onSubmitPlayer(name))}>
       <label>
         Name:
-        <input type="text" value={name} onChange={onNameChange} />
+        <input type="text" value={name} onChange={extractInputValue(setName)} />
       </label>
       <input type="submit" value="Submit" />
     </form>
